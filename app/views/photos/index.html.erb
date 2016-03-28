@@ -1,6 +1,8 @@
 <!-- <p id="notice"><%#= notice %></p> -->
-
-    <% @photos.each do |photo| %>
+    <%if @photos.count < 1%>
+    <p>There are no photos</p>
+    <%else%>
+        <% @photos.each do |photo| %>
         <div class="col-md-3" style="text-align:center;">
         <p><%= image_tag photo.avatar%></p>
         <p><%= photo.tagline %></p>
@@ -10,6 +12,8 @@
         <%#= link_to 'Edit', edit_photo_path(photo) %>
         <%#= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>     
     <% end %>
+    <%end%>
+    
 
 <br>
 
