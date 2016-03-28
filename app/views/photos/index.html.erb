@@ -1,0 +1,16 @@
+<!-- <p id="notice"><%#= notice %></p> -->
+
+    <% @photos.each do |photo| %>
+        <div class="col-md-3" style="text-align:center;">
+        <p><%= image_tag photo.avatar%></p>
+        <p><%= photo.tagline %></p>
+        <p>Owner:<%= photo.album.user.username.capitalize%></p>
+        </div>  
+        <%#= link_to 'Show', photo %>
+        <%#= link_to 'Edit', edit_photo_path(photo) %>
+        <%#= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>     
+    <% end %>
+
+<br>
+
+<%#= link_to 'New Photo', new_photo_path %>
