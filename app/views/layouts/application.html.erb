@@ -12,11 +12,11 @@
 	<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to 'Albums', root_path, :class=>"navbar-brand" %>
+      <%=image_tag '/images/logo.png', :height=>'40px'%>
     </div>
     <ul class="nav navbar-nav">
       <li><%= link_to 'Home', photos_path, :class=>"active" %></li>
-      <li><%= link_to 'albums', albums_path%></li>
+      <li><%= link_to 'Profile', albums_path%></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       
